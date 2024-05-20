@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--===== CSS =====-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Login form style google</title>
+  </head>
+  
+  <body>
+    <div class="l-form">
+      <form action="" class="form" style="background-color: rgb(228, 248, 248)">
+        <h1 class="form__title">Resume Builder</h1>
+
+        <div class="form__div">
+          <input type="text" class="form__input" placeholder=" " />
+          <label for="" class="form__label">Full Name</label>
+        </div>
+        <div class="form__div">
+          <input type="text" class="form__input" placeholder=" " />
+          <label for="" class="form__label">Phone Number</label>
+        </div>
+
+        <div class="form__div">
+          <input type="text" class="form__input" placeholder=" " />
+          <label for="" class="form__label">Email Address</label>
+        </div>
+
+        <div class="form__div">
+          <input type="text" class="form__input" placeholder=" " />
+          <label for="" class="form__label">Address</label>
+        </div>
+
+        <div class="form__div">
+          <label for="" class="form__label"></label>
+          <input type="text" class="form__input" placeholder=" Resume Summary/Objective" />
+        </div>
+
+        <div class="form__div">
+          <input type="text" class="form__input" placeholder=" " />
+          <label for="" class="form__label">Work Experience</label>
+        </div>
+
+        <div class="form__div">
+          <input
+            rows="4"
+            cols="50"
+            type="text"
+            class="form__input"
+            placeholder=" "
+          />
+          <label for="" class="form__label">Education</label>
+        </div>
+
+        <div class="form__div">
+          <input
+            rows="4"
+            cols="50"
+            type="text"
+            class="form__input"
+            placeholder=" "
+          />
+          <label for="" class="form__label">Skills</label>
+        </div>
+        <div class="form__div">
+          <input
+            rows="4"
+            cols="50"
+            type="text"
+            class="form__input"
+            placeholder=" "
+          />
+          <label for="" class="form__label">Professional Certifications</label>
+        </div>
+        <div class="form__div">
+          <input
+            rows="4"
+            cols="50"
+            type="text"
+            class="form__input"
+            placeholder=" "
+          />
+          <label for="" class="form__label">Volunteer Experience</label>
+        </div>
+        <div class="form__div">
+          <input
+            rows="4"
+            cols="50"
+            type="text"
+            class="form__input"
+            placeholder=" "
+          />
+          <label for="" class="form__label">Projects</label>
+        </div>
+        <div class="form__div">
+          <input rows="4" cols="50" class="form__input" placeholder=" " />
+          <label for="" class="form__label">Publications/Presentations</label>
+        </div>
+        <div class="submit__button">
+          <input type="submit" class="form__button" value="Preview" />
+          <input type="submit" class="form__button" value="Generate Resume" />
+        </div>
+      </form>
+    </div>
+    <script>
+      // Preview button functionality
+      document
+        .getElementById("preview_button")
+        .addEventListener("click", function () {
+          var form = document.getElementById("resume_form");
+          var previewDiv = document.getElementById("resume_preview");
+          var previewContent = "";
+
+          // Generate preview content based on form data
+          // You can customize this part to format the preview as you like
+          previewContent += "<h2>Resume Preview</h2>";
+          previewContent +=
+            "<p><strong>Full Name:</strong> " + form.full_name.value + "</p>";
+          previewContent +=
+            "<p><strong>Phone Number:</strong> " +
+            form.phone_number.value +
+            "</p>";
+          previewContent +=
+            "<p><strong>Email Address:</strong> " + form.email.value + "</p>";
+          previewContent +=
+            "<p><strong>Address:</strong> " + form.address.value + "</p>";
+          previewContent +=
+            "<p><strong>Resume Summary/Objective:</strong><br>" +
+            form.summary.value +
+            "</p>";
+          previewContent +=
+            "<p><strong>Work Experience:</strong><br>" +
+            form.work_experience.value +
+            "</p>";
+          previewContent +=
+            "<p><strong>Education:</strong><br>" +
+            form.education.value +
+            "</p>";
+          previewContent +=
+            "<p><strong>Skills:</strong><br>" + form.skills.value + "</p>";
+          previewContent +=
+            "<p><strong>Professional Certifications:</strong><br>" +
+            form.certifications.value +
+            "</p>";
+          previewContent +=
+            "<p><strong>Volunteer Experience:</strong><br>" +
+            form.volunteer_experience.value +
+            "</p>";
+          previewContent +=
+            "<p><strong>Projects:</strong><br>" + form.projects.value + "</p>";
+          previewContent +=
+            "<p><strong>Publications/Presentations:</strong><br>" +
+            form.publications.value +
+            "</p>";
+
+          // Display the preview content
+          previewDiv.innerHTML = previewContent;
+          previewDiv.style.display = "block";
+        });
+    </script>
+  </body>
+</html>
